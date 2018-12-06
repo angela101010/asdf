@@ -1,0 +1,38 @@
+class RottenPotatoes{
+    int[][] ratings = { 
+ {4,6,2,5},
+ {7,9,4,8},
+ {6,9,3,7} 
+};
+ 
+ public int movieAvgRating(int movie) {
+     int total = 0;
+     int answer = 0;
+     for(int r = 0; r<ratings.length; r++) {
+         total += ratings[r][movie];
+    }
+    answer = total/3;
+    return answer;
+}
+public int reviewerAvgRating(int reviewer) {
+    int total = 0;
+    int answer = 0;
+    for(int c = 0; c<ratings[0].length; c++) {
+        total += ratings[reviewer][c];
+    }
+    answer = total/4;
+    return answer;
+}
+public int avgRating2018(){
+    int total = 0;
+    int answer = 0;
+    
+    for(int r=0; r<ratings.length; r++){
+        for(int c=0; c<ratings[0].length; c++){
+            total+= ratings[r][c];
+        }
+}
+answer = total/12;
+return answer;
+}
+}
