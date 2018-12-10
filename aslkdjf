@@ -35,4 +35,37 @@ public int avgRating2018(){
 answer = total/12;
 return answer;
 }
+public int hardestRater2018(){
+    int hardestRater=0;
+    int hardestTotal=1000000000;
+    int total1=0;
+    for(int r=0; r<ratings.length; r++){
+        for(int c=0; c<ratings[0].length; c++){
+           total1 += ratings [r][c];     
+        }  
+        if(total1<hardestTotal){
+            hardestTotal=total1;
+            hardestRater = r;           
+        }       
+        total1=0;
+    }
+    
+    return hardestRater;
+}
+public int worstMovie2018() {
+    int worstMovie=0;
+    int worstTotal=10000000;
+    int total1=0;
+    for(int c=0; c<ratings[0].length; c++){
+        for(int r=0; r<ratings.length; r++){
+            total1 += ratings[r][c];           
+        }
+        if(total1<worstTotal){
+            worstTotal=total1;
+            worstMovie = c;
+        }
+        total1=0;
+    }
+    return worstMovie;
+}
 }
